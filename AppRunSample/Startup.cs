@@ -29,6 +29,13 @@ namespace AppRunSample
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             var product = new Product(name: "Automotive");
+
+            // Termination middleware
+            // Catch all requests
+            // /
+            // /index
+            // /default
+            // /qwerty
             app.Run(async (ctx) =>
             {
                 //await ctx.Response.WriteAsync("Hello world");
