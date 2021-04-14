@@ -16,5 +16,13 @@ namespace ProductGrpcService.Services
                 Name = "Product name"
             });
         }
+
+        public override Task<ProductIdentity> CreateProduct(ProductFull request, ServerCallContext context)
+        {
+            return Task.FromResult(new ProductIdentity
+            {
+                Id = 1
+            });
+        }
     }
 }

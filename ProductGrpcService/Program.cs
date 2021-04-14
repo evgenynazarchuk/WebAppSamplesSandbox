@@ -22,6 +22,14 @@ namespace ProductGrpcService
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    //webBuilder.UseKestrel(configureOptions =>
+                    //{
+                    //    configureOptions.Listen(IPAddress.Any, 5001, listenConfigure =>
+                    //    {
+                    //        listenConfigure.Protocols = HttpProtocols.Http2;
+                    //        listenConfigure.UseHttps();
+                    //    });
+                    //});
                     webBuilder.UseStartup<Startup>();
                     webBuilder.ConfigureKestrel(options =>
                     {

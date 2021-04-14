@@ -6,6 +6,7 @@ package ProductPackage;
 
 service ProductService {
 	rpc GetProduct (ProductIdentity) returns (ProductFull);
+	rpc CreateProduct(ProductFull) returns (ProductIdentity);
 }
 
 message ProductIdentity {
