@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -11,33 +11,43 @@ using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using ProductGrpcService.Services;
+using System.Text;
 
-namespace GrpcService1
+namespace ProductGrpcService
 {
     public class Startup
     {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpsRedirection(options =>
+            {
+                options.HttpsPort = 5001;
+            });
             services.AddGrpc();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGrpcService<GreeterService>();
+                endpoints.MapGrpcService<ProductGrpcService.Services.ProductService>();
+            });
 
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("use grpc");
-                });
+            app.UseHttpsRedirection();
+
+            app.Run(async ctx =>
+            {
+                await ctx.Response.WriteAsync("use grpc");
             });
         }
     }

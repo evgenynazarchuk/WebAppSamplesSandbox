@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Grpc.Core;
 
-namespace gRpcServiceSample.Services
+namespace ProductGrpcService.Services
 {
-    public class ProductService : Product.ProductBase
+    public class ProductService : ProductGrpcService.ProductService.ProductServiceBase
     {
         public override Task<ProductFull> GetProduct(ProductIdentity request, ServerCallContext context)
         {
