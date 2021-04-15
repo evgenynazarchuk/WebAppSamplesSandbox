@@ -8,18 +8,18 @@ namespace ProductGrpcService.Services
 {
     public class ProductService : ProductGrpcService.ProductService.ProductServiceBase
     {
-        public override Task<ProductFull> GetProduct(ProductIdentity request, ServerCallContext context)
+        public override Task<ProductSimpleDto> GetProduct(ProductIdentityDto request, ServerCallContext context)
         {
-            return Task.FromResult(new ProductFull
+            return Task.FromResult(new ProductSimpleDto
             {
                 Id = 1,
                 Name = "Product name"
             });
         }
 
-        public override Task<ProductIdentity> CreateProduct(ProductFull request, ServerCallContext context)
+        public override Task<ProductIdentityDto> CreateProduct(ProductSimpleDto request, ServerCallContext context)
         {
-            return Task.FromResult(new ProductIdentity
+            return Task.FromResult(new ProductIdentityDto
             {
                 Id = 1
             });

@@ -34,16 +34,14 @@ namespace ProductGrpcService
             services.AddGrpc();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
+            app.UseHttpsRedirection();
             app.UseRouting();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGrpcService<ProductGrpcService.Services.ProductService>();
             });
-
-            app.UseHttpsRedirection();
 
             app.Run(async ctx =>
             {

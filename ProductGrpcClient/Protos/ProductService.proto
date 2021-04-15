@@ -5,15 +5,15 @@ option csharp_namespace = "ProductGrpcService";
 package ProductPackage;
 
 service ProductService {
-	rpc GetProduct (ProductIdentity) returns (ProductFull);
-	rpc CreateProduct(ProductFull) returns (ProductIdentity);
+	rpc GetProduct (ProductIdentityDto) returns (ProductSimpleDto);
+	rpc CreateProduct(ProductSimpleDto) returns (ProductIdentityDto);
 }
 
-message ProductIdentity {
+message ProductIdentityDto {
 	int32 id = 1;
 }
 
-message ProductFull {
+message ProductSimpleDto {
 	int32 id = 1;
 	string name = 2;
 }

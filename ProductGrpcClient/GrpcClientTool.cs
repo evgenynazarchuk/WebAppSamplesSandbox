@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Reflection;
 
 namespace ProductGrpcClient
 {
     class GrpcClientTool : IDisposable
     {
-        private Grpc.Net.Client.GrpcChannel _channel;
-        private object _service;
+        private readonly Grpc.Net.Client.GrpcChannel _channel;
+        private readonly object _service;
 
         public GrpcClientTool(Type serviceType, string address)
         {
@@ -23,10 +19,11 @@ namespace ProductGrpcClient
             where TResponse : class, new()
         {
             var method = this._service.GetType().GetMethods().Where(x => x.Name == methodName).ToList();
-            var options = new Grpc.Core.CallOptions();
+            //var options = new Grpc.Core.CallOptions()
 
             DateTime startDateTime = DateTime.Now;
-            var response = method[1].Invoke(this._service, new object[] { requestBody, options });
+            //var response = method[0].Invoke(this._service, new object[] { requestBody, options });
+            var response = method[0].Invoke(this._service, new object[] { requestBody, null, null, null });
             DateTime endDateTime = DateTime.Now;
 
             Console.WriteLine($"{startDateTime.ToString("O")}\t{endDateTime.ToString("O")}\t{endDateTime.Subtract(startDateTime)}");
