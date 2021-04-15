@@ -12,10 +12,10 @@ namespace ProductGrpcClient
         private Grpc.Net.Client.GrpcChannel _channel;
         private object _service;
 
-        public GrpcClientTool(Type service, string address)
+        public GrpcClientTool(Type serviceType, string address)
         {
             this._channel = Grpc.Net.Client.GrpcChannel.ForAddress(address);
-            this._service = Activator.CreateInstance(type: service, args: _channel);
+            this._service = Activator.CreateInstance(type: serviceType, args: _channel);
         }
 
         public TResponse Request<TResponse, TRequest>(string methodName, TRequest requestBody)
