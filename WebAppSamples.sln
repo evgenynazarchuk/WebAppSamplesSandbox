@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductGrpcService", "Produ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductGrpcClient", "ProductGrpcClient\ProductGrpcClient.csproj", "{F75462B0-DE3E-4633-B3FE-BCF390C27DDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUploading", "FileUploading\FileUploading.csproj", "{275B675A-A3F5-4759-8454-90F5002E227D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileUploading", "FileUploading\FileUploading.csproj", "{275B675A-A3F5-4759-8454-90F5002E227D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUploadingClient", "FileUploadingClient\FileUploadingClient.csproj", "{655E8692-5742-4CD9-B11E-32535EFD4052}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{275B675A-A3F5-4759-8454-90F5002E227D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{275B675A-A3F5-4759-8454-90F5002E227D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{275B675A-A3F5-4759-8454-90F5002E227D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{655E8692-5742-4CD9-B11E-32535EFD4052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{655E8692-5742-4CD9-B11E-32535EFD4052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{655E8692-5742-4CD9-B11E-32535EFD4052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{655E8692-5742-4CD9-B11E-32535EFD4052}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

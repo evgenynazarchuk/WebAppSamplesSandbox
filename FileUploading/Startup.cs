@@ -36,8 +36,6 @@ namespace FileUploading
 
         public void Configure(IApplicationBuilder app)
         {
-            //app.UseCors(builder => builder.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
-
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

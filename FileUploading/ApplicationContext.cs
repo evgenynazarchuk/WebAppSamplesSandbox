@@ -8,7 +8,7 @@ namespace FileUploading
 {
     public class ApplicationContext : DbContext
     {
-        public DbSet<FileModel> FileModel { get; set; }
+        public DbSet<DiskFileModel> DiskFileModel { get; set; }
         public DbSet<DbFileModel> DbFileModel { get; set; }
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options)

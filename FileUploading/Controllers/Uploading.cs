@@ -31,7 +31,7 @@ namespace FileUploading.Controllers
         [HttpGet]
         public async Task<IActionResult> GetFilesFromDisk()
         {
-            return Ok(_db.FileModel.ToList());
+            return Ok(_db.DiskFileModel.ToList());
         }
 
         [HttpGet]
@@ -49,36 +49,48 @@ namespace FileUploading.Controllers
             }
 
             var path = "/files/" + file.FileName;
-            Console.WriteLine(_env.WebRootPath + path);
+            
             using var fileStream = new FileStream(_env.WebRootPath + path, FileMode.Create);
             await file.CopyToAsync(fileStream);
             fileStream.Close();
 
-            _db.FileModel.Add(new FileModel { Name = file.FileName, Path = path, ContentType = file.ContentType });
+            _db.DiskFileModel.Add(new DiskFileModel
+            {
+                Name = file.FileName,
+                Path = path,
+                ContentType = file.ContentType
+            });
+
             await _db.SaveChangesAsync();
 
             return Ok();
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddFilesToDisk(IFormFileCollection files)
+        public async Task<IActionResult> AddFilesToDisk([FromForm] IFormFileCollection file)
         {
-            if (files == null)
+            if (file == null)
             {
                 return BadRequest();
             }
 
-            foreach (var file in files)
+            foreach (var f in file)
             {
-                var path = "/files/" + file.FileName;
-                Console.WriteLine(_env.WebRootPath + path);
+                var path = "/files/" + f.FileName;
+                
                 using var fileStream = new FileStream(_env.WebRootPath + path, FileMode.Create);
-                await file.CopyToAsync(fileStream);
+                await f.CopyToAsync(fileStream);
                 fileStream.Close();
-                _db.FileModel.Add(new FileModel { Name = file.FileName, Path = path, ContentType = file.ContentType });
-            }
-            await _db.SaveChangesAsync();
 
+                _db.DiskFileModel.Add(new DiskFileModel 
+                { 
+                    Name = f.FileName, 
+                    Path = path, 
+                    ContentType = f.ContentType 
+                });
+
+                await _db.SaveChangesAsync();
+            }
             return Ok();
         }
 
@@ -92,12 +104,14 @@ namespace FileUploading.Controllers
 
             using var readStream = new BinaryReader(file.OpenReadStream());
             var data = readStream.ReadBytes((int)file.Length);
+
             var dbFile = new DbFileModel
             {
                 Name = file.FileName,
                 Data = data,
                 ContentType = file.ContentType
             };
+
             await _db.DbFileModel.AddAsync(dbFile);
             await _db.SaveChangesAsync();
 
@@ -105,35 +119,37 @@ namespace FileUploading.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> DownloadById1(int id)
+        public async Task<IActionResult> DownloadFromDisk1(int id)
         {
-            var file = _db.FileModel.SingleOrDefault(x => x.Id == id);
+            var file = _db.DiskFileModel.SingleOrDefault(x => x.Id == id);
 
             if (file == null)
             {
-                return BadRequest();
+                return NotFound();
             }
 
             return PhysicalFile(_env.WebRootPath + file.Path, file.ContentType, file.Name);
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> DownloadById2(int id)
+        public async Task<IActionResult> DownloadFromDisk2(int id)
         {
-            var file = _db.FileModel.SingleOrDefault(x => x.Id == id);
+            var file = _db.DiskFileModel.SingleOrDefault(x => x.Id == id);
 
             if (file == null)
             {
                 return BadRequest();
             }
 
-            return File(_env.WebRootPath + file.Path, file.ContentType, file.Name);
+            var path = Path.Combine(_env.WebRootPath, file.Path);
+
+            return File(path, file.ContentType, file.Name);
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> DownloadById3(int id)
+        public async Task<IActionResult> DownloadFromDisk3(int id)
         {
-            var file = _db.FileModel.SingleOrDefault(x => x.Id == id);
+            var file = _db.DiskFileModel.SingleOrDefault(x => x.Id == id);
 
             if (file == null)
             {
@@ -147,7 +163,7 @@ namespace FileUploading.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> DownloadById4(int id)
+        public async Task<IActionResult> DownloadFromDb1(int id)
         {
             var file = _db.DbFileModel.SingleOrDefault(x => x.Id == id);
 
