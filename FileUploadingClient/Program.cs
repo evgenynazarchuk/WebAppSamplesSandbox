@@ -1,10 +1,5 @@
-﻿using System;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.IO;
-using System.Net.Mime;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace FileUploadingClient
 {

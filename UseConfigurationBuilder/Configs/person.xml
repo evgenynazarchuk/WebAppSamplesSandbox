@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<anyperson>
+	<firstname>First Name</firstname>
+	<lastname>Last Name</lastname>
+	<country>
+		<name>Country Name</name>
+		<capital>Capital Name</capital>
+	</country>
+</anyperson>
