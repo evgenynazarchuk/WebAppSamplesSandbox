@@ -17,6 +17,9 @@ namespace WithHighPerfLogging.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            // appsettings.json
+            // "WithHighPerfLogging.Controllers.HomeController": "Trace"
+
             AppLogger.TraceMessage(_logger);
             AppLogger.TraceMessage(_logger, "any message-1");
             AppLogger.TraceMessage(_logger, "any message-2", 42);
