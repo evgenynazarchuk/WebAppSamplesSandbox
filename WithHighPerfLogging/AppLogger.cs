@@ -22,9 +22,4 @@ namespace WithHighPerfLogging
                 AppLogger._sendMessage(logger, message, null);
         }
     }
-
-    public static class Events
-    {
-        public static readonly EventId Started = new EventId(100, "Started");
-    }
 }
