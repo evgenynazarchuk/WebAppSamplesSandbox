@@ -14,6 +14,7 @@ namespace WithSimpleLogger.Controllers
             _logger = logger;
         }
 
+        // GET localhost/home
         [HttpGet]
         public IActionResult Get()
         {
