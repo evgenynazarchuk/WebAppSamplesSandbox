@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpContextCookies", "HttpC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UseConfigurationBuilder", "UseConfigurationBuilder\UseConfigurationBuilder.csproj", "{017F3AE6-6106-4218-8257-559E243E6175}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithSimpleLogger", "WithSimpleLogger\WithSimpleLogger.csproj", "{D5D55EB3-0FD5-417E-B1EF-198F56AB3BB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WithSimpleLogger", "WithSimpleLogger\WithSimpleLogger.csproj", "{D5D55EB3-0FD5-417E-B1EF-198F56AB3BB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithHighPerfLogging", "WithHighPerfLogging\WithHighPerfLogging.csproj", "{1B21E910-500F-4EEC-B794-E97D7F80A081}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WithHighPerfLogging", "WithHighPerfLogging\WithHighPerfLogging.csproj", "{1B21E910-500F-4EEC-B794-E97D7F80A081}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductMVC", "ProductMVC\ProductMVC.csproj", "{1583C177-A49D-4F9D-B44C-6B90D8423EE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{1B21E910-500F-4EEC-B794-E97D7F80A081}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B21E910-500F-4EEC-B794-E97D7F80A081}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B21E910-500F-4EEC-B794-E97D7F80A081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1583C177-A49D-4F9D-B44C-6B90D8423EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1583C177-A49D-4F9D-B44C-6B90D8423EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1583C177-A49D-4F9D-B44C-6B90D8423EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1583C177-A49D-4F9D-B44C-6B90D8423EE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

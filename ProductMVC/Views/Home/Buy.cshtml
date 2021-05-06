@@ -1,0 +1,25 @@
+﻿@model ProductMVC.Models.Product
+
+@*
+*@
+
+@{
+    ViewData["title"] = "Buy";
+    Layout = "/Views/Shared/_Layout.cshtml";
+    var product = Model as ProductMVC.Models.Product;
+}
+
+
+<h1>Buy</h1>
+
+<label>Product</label>
+<span>@product.Name</span> <br/>
+<label>Price</label>
+<span>@product.Price</span>
+
+<form action="~/home/buy" method="post">
+    <label>Customer</label>
+    <input type="hidden" value="@product.Id" name="ProductId" />
+    <input type="text" name="Customer" value="Evgeny" />
+    <input type="submit" value="Buy" />
+</form>

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ProductMVC.Models.Order>
+
+@*
+*@
+
+@{
+    ViewData["title"] = "Orders";
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1>Orders</h1>
+<table>
+    <tr>
+        <th>Order Ident</th>
+        <th>Customer</th>
+        <th>Product</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var order in Model)
+    {
+        <tr>
+            <td>@order.Id</td>
+            <td>@order.Customer</td>
+            <td>@order.Product.Name</td>
+            <td>@order.Product.Price</td>
+        </tr>
+    }
+</table>
