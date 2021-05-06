@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using ProductMVC.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -40,14 +38,12 @@ namespace ProductMVC.Controllers
             var orders = _db.Orders.Include(x => x.Product).ToList();
             return View(orders);
         }
-        
-        [HttpGet("{id?}")]
-        public IActionResult Buy(Guid? id)
+
+        [HttpGet]
+        public IActionResult Buy([FromQuery]Guid? id)
         {
             if (id is null)
-            {
                 return BadRequest("Product not found");
-            }
 
             var product = this._db.Products.SingleOrDefault(x => x.Id == id);
         
@@ -55,7 +51,7 @@ namespace ProductMVC.Controllers
         }
         
         [HttpPost]
-        public IActionResult Buy(Order order)
+        public IActionResult Buy([FromForm]Order order)
         {
             this._db.Orders.Add(order);
             this._db.SaveChanges();
