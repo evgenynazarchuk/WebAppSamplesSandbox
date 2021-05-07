@@ -27,7 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WithSimpleLogger", "WithSim
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WithHighPerfLogging", "WithHighPerfLogging\WithHighPerfLogging.csproj", "{1B21E910-500F-4EEC-B794-E97D7F80A081}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductMVC", "ProductMVC\ProductMVC.csproj", "{1583C177-A49D-4F9D-B44C-6B90D8423EE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductMVC", "ProductMVC\ProductMVC.csproj", "{1583C177-A49D-4F9D-B44C-6B90D8423EE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverrideActionResult", "OverrideActionResult\OverrideActionResult.csproj", "{958AE582-7BF2-44B7-894C-C4D01C8EFD96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverrideController", "OverrideController\OverrideController.csproj", "{57CCD173-6323-4737-8661-735053AB678D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +91,14 @@ Global
 		{1583C177-A49D-4F9D-B44C-6B90D8423EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1583C177-A49D-4F9D-B44C-6B90D8423EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1583C177-A49D-4F9D-B44C-6B90D8423EE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{958AE582-7BF2-44B7-894C-C4D01C8EFD96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{958AE582-7BF2-44B7-894C-C4D01C8EFD96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{958AE582-7BF2-44B7-894C-C4D01C8EFD96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{958AE582-7BF2-44B7-894C-C4D01C8EFD96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57CCD173-6323-4737-8661-735053AB678D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57CCD173-6323-4737-8661-735053AB678D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57CCD173-6323-4737-8661-735053AB678D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57CCD173-6323-4737-8661-735053AB678D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
