@@ -45,10 +45,7 @@ namespace AppWithMemoryCache
 
             if (n > 0)
             {
-                this._cache.Set(person.Id, person, new MemoryCacheEntryOptions()
-                {
-                    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5)
-                });
+                this._cache.Set(person.Id, person, TimeSpan.FromMinutes(5));
             }
 
             return person;
