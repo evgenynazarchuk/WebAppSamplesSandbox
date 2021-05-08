@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWithMemoryCache", "AppWi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWithResponseCache", "AppWithResponseCache\AppWithResponseCache.csproj", "{978FEEDC-D3EF-4417-9536-6E788B71CF45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWithRazorPages", "AppWithRazorPages\AppWithRazorPages.csproj", "{5C6C21E1-C949-4A97-8CB9-C9F586E00D83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{978FEEDC-D3EF-4417-9536-6E788B71CF45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{978FEEDC-D3EF-4417-9536-6E788B71CF45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{978FEEDC-D3EF-4417-9536-6E788B71CF45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C6C21E1-C949-4A97-8CB9-C9F586E00D83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C6C21E1-C949-4A97-8CB9-C9F586E00D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C6C21E1-C949-4A97-8CB9-C9F586E00D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C6C21E1-C949-4A97-8CB9-C9F586E00D83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,15 @@
+﻿@page
+@model AppWithRazorPages.Pages.CustomerManager.AddModel
+@{
+    ViewBag.Title = "Add new customer";
+}
+
+
+<h1>Add new customer</h1>
+<form action="~/CustomerManager/Add" method="post">
+    <label>Full name</label> <br />
+    <input type="text" name="fullname" value="Default Name" /> <br />
+    <label>Address</label> <br />
+    <input type="text" name="address" value="Default Address" /> <br />
+    <input type="submit" value="Add" />
+</form>

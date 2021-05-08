@@ -1,0 +1,21 @@
+﻿@page
+@model AppWithRazorPages.Pages.CustomerManager.EditModel
+@{
+    ViewBag.Title = "Edit customer";
+}
+
+@if (Model is null)
+{
+    <h3>Customer not found</h3>
+}
+else
+{
+<form action="~/CustomerManager/Edit" method="post">
+    <input type="hidden" name="id" value="@Model.Customer.Id" />
+    <label>Full name</label> <br />
+    <input type="text" name="fullname" value="@Model.Customer.FullName" /> <br />
+    <label>Address</label> <br />
+    <input type="text" name="address" value="@Model.Customer.Address" /> <br />
+    <input type="submit" value="Save" />
+</form>
+}

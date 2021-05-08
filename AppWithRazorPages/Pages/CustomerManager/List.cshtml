@@ -1,0 +1,28 @@
+﻿@page
+@model AppWithRazorPages.Pages.CustomerManager.ListModel
+@{
+    ViewBag.Title = "List Page";
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>Identity</th>
+            <th>Fullname</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Customer customer in Model.Customers)
+        {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.FullName</td>
+                <td>@customer.Address</td>
+                <td><a href="~/CustomerManager/edit?id=@customer.Id">Edit</a></td>
+                <td><a href="~/CustomerManager/delete?id=@customer.Id">Delete</a></td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
