@@ -72,6 +72,14 @@ namespace AppWithResponseCache
 
             app.UseResponseCompression();
 
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                OnPrepareResponse = ctx =>
+                {
+                    ctx.Context.Response.Headers.Add("Cache-Control", "public,max-age=600");
+                }
+            });
+
             app.UseRouting();
             app.UseEndpoints(endpoints =>
             {
