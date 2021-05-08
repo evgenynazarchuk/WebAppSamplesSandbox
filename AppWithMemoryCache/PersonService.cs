@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
@@ -26,10 +25,9 @@ namespace AppWithMemoryCache
 
         public async Task<Person> GetAsync(Guid id)
         {
-            Person person;
-            if (!this._cache.TryGetValue(id, out person))
+            if (!this._cache.TryGetValue(id, out Person person))
             {
-                person = await _data.Persons.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
+                person = await _data.Persons.FirstOrDefaultAsync(x => x.Id == id);
                 if (person is not null)
                 {
                     this._cache.Set(person.Id, person, TimeSpan.FromMinutes(5));
