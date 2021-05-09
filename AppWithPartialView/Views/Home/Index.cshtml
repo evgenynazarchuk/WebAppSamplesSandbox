@@ -1,0 +1,14 @@
+﻿@*
+*@
+
+@{
+    ViewData["Title"] = "Index Page";
+    var citiesList = new List<string> { "City 1", "City 2", "City 3" };
+    var countriesList = new List<string> { "Country 1", "Country 2", "Country 3" };
+}
+
+<h1>Lists</h1>
+<h2>Cities</h2>
+@{ await Html.RenderPartialAsync("_PrintList", citiesList); }
+<h2>Countries</h2>
+@await Html.PartialAsync("_PrintList", countriesList)

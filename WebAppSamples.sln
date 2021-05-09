@@ -33,11 +33,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OverrideActionResult", "Ove
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OverrideController", "OverrideController\OverrideController.csproj", "{57CCD173-6323-4737-8661-735053AB678D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWithMemoryCache", "AppWithMemoryCache\AppWithMemoryCache.csproj", "{79686F07-DA7A-41EA-8823-6814B941797C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWithMemoryCache", "AppWithMemoryCache\AppWithMemoryCache.csproj", "{79686F07-DA7A-41EA-8823-6814B941797C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWithResponseCache", "AppWithResponseCache\AppWithResponseCache.csproj", "{978FEEDC-D3EF-4417-9536-6E788B71CF45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWithResponseCache", "AppWithResponseCache\AppWithResponseCache.csproj", "{978FEEDC-D3EF-4417-9536-6E788B71CF45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWithRazorPages", "AppWithRazorPages\AppWithRazorPages.csproj", "{5C6C21E1-C949-4A97-8CB9-C9F586E00D83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWithRazorPages", "AppWithRazorPages\AppWithRazorPages.csproj", "{5C6C21E1-C949-4A97-8CB9-C9F586E00D83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWithPartialView", "AppWithPartialView\AppWithPartialView.csproj", "{2C2A17FA-C689-4C87-BCD2-76928C5AD013}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{5C6C21E1-C949-4A97-8CB9-C9F586E00D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C6C21E1-C949-4A97-8CB9-C9F586E00D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C6C21E1-C949-4A97-8CB9-C9F586E00D83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C2A17FA-C689-4C87-BCD2-76928C5AD013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C2A17FA-C689-4C87-BCD2-76928C5AD013}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C2A17FA-C689-4C87-BCD2-76928C5AD013}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C2A17FA-C689-4C87-BCD2-76928C5AD013}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
