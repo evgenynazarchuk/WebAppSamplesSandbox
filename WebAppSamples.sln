@@ -41,6 +41,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWithRazorPages", "AppWit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWithPartialView", "AppWithPartialView\AppWithPartialView.csproj", "{2C2A17FA-C689-4C87-BCD2-76928C5AD013}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWithViewComponent", "AppWithViewComponent\AppWithViewComponent.csproj", "{2FC8AD17-F700-47C3-A784-F22B8D8F6185}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{2C2A17FA-C689-4C87-BCD2-76928C5AD013}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C2A17FA-C689-4C87-BCD2-76928C5AD013}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C2A17FA-C689-4C87-BCD2-76928C5AD013}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FC8AD17-F700-47C3-A784-F22B8D8F6185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FC8AD17-F700-47C3-A784-F22B8D8F6185}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FC8AD17-F700-47C3-A784-F22B8D8F6185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FC8AD17-F700-47C3-A784-F22B8D8F6185}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

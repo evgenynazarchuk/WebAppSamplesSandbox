@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Index Page";
+    var userProfile = new UserPorfile("Fullname 1", "Address 1");
+}
+
+<h1>Index</h1>
+
+@*
+        @await Component.InvokeAsync(typeof(Profile), new { userProfile = userProfile })
+        
+    <vc:status></vc:status>
+*@
+
+<div>
+    <vc:profile user-profile="@userProfile"></vc:profile>
+</div>
+
+<div>
+    <vc:time></vc:time>
+</div>
+
+<div>
+    <vc:connecting-status></vc:connecting-status>
+</div>
