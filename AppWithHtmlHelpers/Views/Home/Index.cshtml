@@ -1,0 +1,11 @@
+﻿@*
+*@
+
+@{
+    ViewData["Title"] = "Index Page";
+    var cities = new List<string> { "City 1", "City 2", "City 3" };
+}
+
+
+<h1>Html Helpers</h1>
+@Html.PrintList(cities)

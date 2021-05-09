@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWithPartialView", "AppWi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWithViewComponent", "AppWithViewComponent\AppWithViewComponent.csproj", "{2FC8AD17-F700-47C3-A784-F22B8D8F6185}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWithHtmlHelpers", "AppWithHtmlHelpers\AppWithHtmlHelpers.csproj", "{A5A08E5F-75E8-4258-B6EF-C2CA0F60AF7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{2FC8AD17-F700-47C3-A784-F22B8D8F6185}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FC8AD17-F700-47C3-A784-F22B8D8F6185}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FC8AD17-F700-47C3-A784-F22B8D8F6185}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5A08E5F-75E8-4258-B6EF-C2CA0F60AF7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A08E5F-75E8-4258-B6EF-C2CA0F60AF7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A08E5F-75E8-4258-B6EF-C2CA0F60AF7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A08E5F-75E8-4258-B6EF-C2CA0F60AF7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
