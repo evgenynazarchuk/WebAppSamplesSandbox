@@ -39,11 +39,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWithResponseCache", "App
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWithRazorPages", "AppWithRazorPages\AppWithRazorPages.csproj", "{5C6C21E1-C949-4A97-8CB9-C9F586E00D83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWithPartialView", "AppWithPartialView\AppWithPartialView.csproj", "{2C2A17FA-C689-4C87-BCD2-76928C5AD013}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWithPartialView", "AppWithPartialView\AppWithPartialView.csproj", "{2C2A17FA-C689-4C87-BCD2-76928C5AD013}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWithViewComponent", "AppWithViewComponent\AppWithViewComponent.csproj", "{2FC8AD17-F700-47C3-A784-F22B8D8F6185}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWithViewComponent", "AppWithViewComponent\AppWithViewComponent.csproj", "{2FC8AD17-F700-47C3-A784-F22B8D8F6185}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWithHtmlHelpers", "AppWithHtmlHelpers\AppWithHtmlHelpers.csproj", "{A5A08E5F-75E8-4258-B6EF-C2CA0F60AF7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWithHtmlHelpers", "AppWithHtmlHelpers\AppWithHtmlHelpers.csproj", "{A5A08E5F-75E8-4258-B6EF-C2CA0F60AF7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
