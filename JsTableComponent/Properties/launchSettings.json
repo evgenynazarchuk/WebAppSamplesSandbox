@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:38168",
+      "applicationUrl": "http://localhost:3217",
       "sslPort": 0
     }
   },
@@ -12,11 +12,12 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
+      "launchUrl": "weatherforecast",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "AppWithHtmlHelpers": {
+    "JsTableComponent": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
