@@ -1,0 +1,9 @@
+<input [(ngModel)]="textMessage" placeholder="text message" /> <br />
+<input [value]="textMessage" readonly aria-label="text message 2" /> <br />
+<input value="{{textMessage}}" readonly aria-label="text message 3" />
+<p [textContent]="textMessage"></p>
+<p>{{textMessage}}</p>
+<input type="checkbox" [(ngModel)]="testFlag" aria-label="true or false" />
+<p>{{testFlag}}</p>
+<button (click)="incrementCounter()">Increment</button>
+<p>Counter: {{counter}}</p>
