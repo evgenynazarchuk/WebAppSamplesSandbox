@@ -12,7 +12,7 @@
     using Microsoft.AspNetCore.OData.Query;
 
     [ApiController]
-    [Route("[controller]/[action]")]
+    [Route("[controller]")]
     public class PersonController : ControllerBase
     {
         public readonly List<Person> Persons = new List<Person>
@@ -29,7 +29,7 @@
 
         [EnableQuery]
         [HttpGet]
-        public ActionResult<IQueryable<Person>> GetPersons()
+        public ActionResult<IQueryable<Person>> Get()
         {
             return Ok(this.Persons.AsQueryable());
         }
