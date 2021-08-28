@@ -1,5 +1,5 @@
-﻿using System.Net.Http;
-using System.IO;
+﻿using System.IO;
+using System.Net.Http;
 
 namespace FileUploadingClient
 {
@@ -60,7 +60,7 @@ namespace FileUploadingClient
             var response = client.GetAsync("http://localhost:5000/uploading/DownloadFromDisk1/1").GetAwaiter().GetResult();
             var fileName = response.Content.Headers.ContentDisposition.FileName;
             using var fileStream = File.OpenWrite(fileName);
-            
+
             response.Content.CopyToAsync(fileStream).GetAwaiter().GetResult();
             fileStream.Close();
         }

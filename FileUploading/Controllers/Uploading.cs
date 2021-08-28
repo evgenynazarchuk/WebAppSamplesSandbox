@@ -1,17 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using System.IO;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using System.Diagnostics.Eventing.Reader;
 
 namespace FileUploading.Controllers
 {
@@ -49,7 +41,7 @@ namespace FileUploading.Controllers
             }
 
             var path = "/files/" + file.FileName;
-            
+
             using var fileStream = new FileStream(_env.WebRootPath + path, FileMode.Create);
             await file.CopyToAsync(fileStream);
             fileStream.Close();
@@ -77,16 +69,16 @@ namespace FileUploading.Controllers
             foreach (var f in file)
             {
                 var path = "/files/" + f.FileName;
-                
+
                 using var fileStream = new FileStream(_env.WebRootPath + path, FileMode.Create);
                 await f.CopyToAsync(fileStream);
                 fileStream.Close();
 
-                _db.DiskFileModel.Add(new DiskFileModel 
-                { 
-                    Name = f.FileName, 
-                    Path = path, 
-                    ContentType = f.ContentType 
+                _db.DiskFileModel.Add(new DiskFileModel
+                {
+                    Name = f.FileName,
+                    Path = path,
+                    ContentType = f.ContentType
                 });
 
                 await _db.SaveChangesAsync();
@@ -158,7 +150,7 @@ namespace FileUploading.Controllers
 
             string path = _env.WebRootPath + file.Path;
             var fileStream = new FileStream(path, FileMode.Open);
-            
+
             return File(fileStream, file.ContentType, file.Name);
         }
 

@@ -1,5 +1,5 @@
-﻿using System;
-using ProductGrpcService;
+﻿using ProductGrpcService;
+using System;
 
 namespace ProductGrpcClient
 {

@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
+using System.Threading.Tasks;
 
 namespace UseConfigurationBuilder
 {
@@ -12,8 +12,8 @@ namespace UseConfigurationBuilder
         private readonly Network _network;
 
         public ReadConfigurationMiddleware(
-            RequestDelegate next, 
-            IConfiguration configuration, 
+            RequestDelegate next,
+            IConfiguration configuration,
             IOptions<Network> network
             )
         {

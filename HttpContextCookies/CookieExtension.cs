@@ -22,7 +22,7 @@ namespace HttpContextCookies
             {
                 @object = default;
             }
-            
+
             return result;
         }
     }

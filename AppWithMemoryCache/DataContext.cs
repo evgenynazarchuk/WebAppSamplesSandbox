@@ -7,7 +7,7 @@ namespace AppWithMemoryCache
         public DbSet<Person> Persons { get; set; }
 
         public DataContext(DbContextOptions<DataContext> options)
-            :base(options)
+            : base(options)
         {
             Database.EnsureCreated();
         }

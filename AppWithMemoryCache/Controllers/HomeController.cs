@@ -16,7 +16,7 @@ namespace AppWithMemoryCache.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetPerson([FromQuery]Guid? id)
+        public async Task<IActionResult> GetPerson([FromQuery] Guid? id)
         {
             if (id.HasValue)
             {
@@ -30,7 +30,7 @@ namespace AppWithMemoryCache.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreatePerson([FromBody]Person person)
+        public async Task<IActionResult> CreatePerson([FromBody] Person person)
         {
             if (person is not null)
             {

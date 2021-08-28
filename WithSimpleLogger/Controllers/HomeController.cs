@@ -18,18 +18,18 @@ namespace WithSimpleLogger.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            
-           // appsettings.json
-           // "WithSimpleLogger.Controllers.HomeController": "Trace"
 
-           // Trace = 0 (trace, debug, information, crtical, error, warning)
-           // Debug = 1 (debug, information, crtical, error, warning)
-           // Information = 2 (information, crtical, error, warning)
-           // Warning = 3 (crtical, error, warning)
-           // Error = 4 (critical, error)
-           // Critical = 5 (only critical)
-           // None = 6 (no loggin)
-            
+            // appsettings.json
+            // "WithSimpleLogger.Controllers.HomeController": "Trace"
+
+            // Trace = 0 (trace, debug, information, crtical, error, warning)
+            // Debug = 1 (debug, information, crtical, error, warning)
+            // Information = 2 (information, crtical, error, warning)
+            // Warning = 3 (crtical, error, warning)
+            // Error = 4 (critical, error)
+            // Critical = 5 (only critical)
+            // None = 6 (no loggin)
+
 
             _logger.LogCritical("Critical message");
             _logger.LogDebug("Debug message");

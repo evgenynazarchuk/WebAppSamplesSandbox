@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
-using ProductMVC.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using ProductMVC.Models;
+using System;
+using System.Linq;
 
 namespace ProductMVC.Controllers
 {
@@ -12,13 +12,13 @@ namespace ProductMVC.Controllers
     {
         private readonly DatabaseContext _db;
         private readonly ILogger<HomeController> _logger;
-        
+
         public HomeController(DatabaseContext db, ILogger<HomeController> logger)
         {
             this._logger = logger;
             this._db = db;
         }
-        
+
         [HttpGet]
         public IActionResult Index()
         {
@@ -40,18 +40,18 @@ namespace ProductMVC.Controllers
         }
 
         [HttpGet]
-        public IActionResult Buy([FromQuery]Guid? id)
+        public IActionResult Buy([FromQuery] Guid? id)
         {
             if (id is null)
                 return BadRequest("Product not found");
 
             var product = this._db.Products.SingleOrDefault(x => x.Id == id);
-        
+
             return View(product);
         }
-        
+
         [HttpPost]
-        public IActionResult Buy([FromForm]Order order)
+        public IActionResult Buy([FromForm] Order order)
         {
             this._db.Orders.Add(order);
             this._db.SaveChanges();

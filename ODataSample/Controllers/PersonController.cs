@@ -1,21 +1,16 @@
 ﻿namespace ODataSample.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Logging;
-    using System;
+    using Microsoft.AspNetCore.OData.Query;
+    using ODataSample.Models;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Threading.Tasks;
-    using ODataSample.Models;
-    using Microsoft.AspNetCore.OData.Routing;
-    using Microsoft.AspNetCore.OData;
-    using Microsoft.AspNetCore.OData.Query;
 
     [ApiController]
     [Route("[controller]")]
     public class PersonController : ControllerBase
     {
-        public readonly List<Person> Persons = new List<Person>
+        public readonly List<Person> Persons = new ()
         {
             new Person() { Id = 1, FullName = "Evgeny 1", Age = 21 },
             new Person() { Id = 2, FullName = "Evgeny 2", Age = 22 },

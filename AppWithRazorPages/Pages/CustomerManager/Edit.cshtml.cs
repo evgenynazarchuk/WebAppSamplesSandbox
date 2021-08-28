@@ -1,6 +1,6 @@
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Threading.Tasks;
 
 namespace AppWithRazorPages.Pages.CustomerManager
 {
@@ -19,7 +19,7 @@ namespace AppWithRazorPages.Pages.CustomerManager
             this.Customer = await this._data.Customers.FindAsync(id);
         }
 
-        public async Task<IActionResult> OnPost([FromForm]Customer customer)
+        public async Task<IActionResult> OnPost([FromForm] Customer customer)
         {
             this._data.Customers.Update(customer);
             await this._data.SaveChangesAsync();

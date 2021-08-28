@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using ProductMVC.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ProductMVC
 {
@@ -11,7 +11,7 @@ namespace ProductMVC
         public DbSet<Product> Products { get; set; }
 
         public DatabaseContext(DbContextOptions<DatabaseContext> options)
-            :base(options)
+            : base(options)
         {
             Database.EnsureCreated();
 
