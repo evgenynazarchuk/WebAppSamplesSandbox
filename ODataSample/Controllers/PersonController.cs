@@ -4,7 +4,6 @@
     using Microsoft.AspNetCore.OData.Query;
     using ODataSample.Models;
     using System.Collections.Generic;
-    using System.Linq;
 
     [ApiController]
     [Route("[controller]")]
@@ -22,11 +21,14 @@
             new Person() { Id = 8, FullName = "Evgeny 8", Age = 28 },
         };
 
+        // TODO: Compare performance of IQueryable and List
+        // TODO: Compare performance of IActionResult and ActionResult<List<Person>>
+        // TODO: Compare performance of EnableQuery and Simple Get Request
         [EnableQuery]
         [HttpGet]
-        public ActionResult<IQueryable<Person>> Get()
+        public IActionResult Get()
         {
-            return Ok(this.Persons.AsQueryable());
+            return Ok(this.Persons);
         }
     }
 }
