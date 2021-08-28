@@ -47,7 +47,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWithHtmlHelpers", "AppWi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsTableComponent", "JsTableComponent\JsTableComponent.csproj", "{3140F429-0483-4ABB-AD81-0C8D3DC6520A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetAngular", "DotNetAngular\DotNetAngular.csproj", "{CDF4F7E7-D386-4A96-BBEC-8B45E1D7FECC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetAngular", "DotNetAngular\DotNetAngular.csproj", "{CDF4F7E7-D386-4A96-BBEC-8B45E1D7FECC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataSample", "ODataSample\ODataSample.csproj", "{3D307D6E-16E3-44AA-864F-6A821E3C0B04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -147,6 +149,10 @@ Global
 		{CDF4F7E7-D386-4A96-BBEC-8B45E1D7FECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDF4F7E7-D386-4A96-BBEC-8B45E1D7FECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDF4F7E7-D386-4A96-BBEC-8B45E1D7FECC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D307D6E-16E3-44AA-864F-6A821E3C0B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D307D6E-16E3-44AA-864F-6A821E3C0B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D307D6E-16E3-44AA-864F-6A821E3C0B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D307D6E-16E3-44AA-864F-6A821E3C0B04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
