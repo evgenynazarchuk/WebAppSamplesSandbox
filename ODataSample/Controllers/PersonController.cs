@@ -9,7 +9,7 @@
     [Route("[controller]")]
     public class PersonController : ControllerBase
     {
-        public readonly List<Person> Persons = new ()
+        public readonly List<Person> Persons = new()
         {
             new Person() { Id = 1, FullName = "Evgeny 1", Age = 21 },
             new Person() { Id = 2, FullName = "Evgeny 2", Age = 22 },
