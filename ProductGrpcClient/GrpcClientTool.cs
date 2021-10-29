@@ -15,8 +15,8 @@ namespace ProductGrpcClient
         }
 
         public TResponse Request<TResponse, TRequest>(string methodName, TRequest requestBody)
-            where TRequest : class, new()
-            where TResponse : class, new()
+            where TRequest : class
+            where TResponse : class
         {
             var method = this._service.GetType().GetMethods().Where(x => x.Name == methodName).ToList();
             //var options = new Grpc.Core.CallOptions()
@@ -32,14 +32,14 @@ namespace ProductGrpcClient
         }
 
         public void Request<TResponse, TRequest>(string methodName, TRequest requestBody, out TResponse responseBody)
-            where TRequest : class, new()
-            where TResponse : class, new()
+            where TRequest : class
+            where TResponse : class
         {
             responseBody = this.Request<TResponse, TRequest>(methodName, requestBody);
         }
 
         public void Request<TRequest>(string methodName, TRequest requestBody)
-            where TRequest : class, new()
+            where TRequest : class
         {
             this.Request<object, TRequest>(methodName, requestBody);
         }
